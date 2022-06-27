@@ -1,0 +1,159 @@
+#myContainer {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+  -webkit-mask-box-image: url(./img.png);
+
+  margin: 0 auto;
+}
+#myAnimation {
+  width: 400px;
+  height: 800px;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.438);
+  mask-image: url(./img.png);
+  top: 400px;
+}
+
+#element::-webkit-scrollbar {
+  width: 0;
+}
+
+.dws {
+  position: absolute;
+  top: 650px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.butt {
+  border: 3px solid #f66c8a;
+  border-radius: 50%;
+
+  font-size: 30px;
+  color: #f66c8a;
+  text-decoration: none;
+  /* text-transform: uppercase; */
+  width: 200px;
+  height: 200px;
+  display: block;
+  text-align: center;
+  line-height: 200px;
+  font-family: Arial, Helvetica;
+  position: relative;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.butt::before,
+.butt::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #f59289;
+  top: 100%;
+  left: 0%;
+  /* opacity: 0.5; */
+  transition: 0.3s;
+  z-index: -1;
+}
+.butt::after {
+  background: #f66c8a;
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+.butt:hover {
+  color: #ffdbe3;
+}
+.butt:hover::before,
+.butt:hover::after {
+  top: 0;
+}
+
+.butt2 {
+  border: 3px solid #ffb4ab;
+  border-radius: 50%;
+  /* background-color: #f66c8a; */
+  font-size: 30px;
+  color: #ffb4ab;
+  text-decoration: none;
+  /* text-transform: uppercase; */
+  width: 200px;
+  height: 200px;
+  display: block;
+  text-align: center;
+  line-height: 200px;
+  font-family: Arial, Helvetica;
+  position: relative;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.mystyle {
+  margin: 0 auto;
+
+  justify-content: center;
+  height: 100vh;
+  display: flex;
+}
+.time {
+  font-size: 70px;
+}
+.rounded-img {
+  width: 60%;
+  padding: 0.8em;
+  margin-bottom: 1em;
+}
+.btn-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border-width: 2px;
+  border-color: #f66c8a;
+
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 19px;
+  white-space: normal;
+}
+.btn-circle2 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 5px;
+  white-space: normal; /* восстанавливаем свойству значение по умолчанию */
+}
+.timer {
+  font-size: 50px;
+  font-weight: 350;
+}
+.timer2 {
+  font-size: 90px;
+}
+.difficulty {
+  font-size: 20px;
+  font-weight: 350;
+}
+.comment1 {
+  margin-top: 260px;
+}
+.comment2 {
+  font-size: 30px;
+}
+.difmargin {
+  margin-top: 200px;
+}
+
+.colorActive {
+  color: #ffb4ab !important;
+}
