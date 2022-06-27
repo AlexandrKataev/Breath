@@ -20,6 +20,16 @@
   width: 0;
 }
 
+@media (max-height: 850px) {
+  #mainblock {
+    transform: scale(0.7, 0.7);
+    margin-top: -100px;
+  }
+  .dws {
+    top: 540px !important;
+  }
+}
+
 .dws {
   position: absolute;
   top: 650px;
