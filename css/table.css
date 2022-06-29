@@ -1,0 +1,18 @@
+/* .myTable {
+  background-color: #2f2d3a;
+  color: #f56b8c;
+  border: 4px;
+  border-color: #2f2d3a;
+} */
+
+table {
+  background-color: #2f2d3a;
+  color: #f56b8c;
+  border: 1px solid grey;
+}
+th {
+  border: 3px solid #222129;
+}
+td {
+  border: 3px solid #222129;
+}
