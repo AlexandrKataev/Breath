@@ -212,6 +212,7 @@ function myMove() {
 // Видимость остальных объектов
 
 const hideObject = () => {
+  document.getElementById("time").setAttribute("onclick", "");
   document.getElementById("range").classList.add("hide");
   document.getElementById("rangeValue").classList.add("hide");
   document.getElementById("menu1").classList.add("hide");
