@@ -5,58 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Breath</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./js/start.js"></script>
+    <script src="./js/start2.js"></script>
     <script src="./js/changestyle.js"></script>
+    <script src="./js/level.js"></script>
 
     <link rel="icon" type="image/png" sizes="32x32" href="./img/favvv.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="./img/favvv.png" />
     <link rel="stylesheet" href="./css/style.css" />
+    
     <style></style>
   </head>
-  <body id="element" class="bg-dark">
+  <body id="element" class="backGround">
     <!-- Меню -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand p-0" href="#">
-          <img src="./img/fav.png" alt="Logo" width="50" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="places.html">FAQ</a>
-            </li>
-          </ul>
-        </div>
+    <nav class="">
+      <div>
+        <ul>
+          <li id="menu1" class="menuActive">
+            <a  aria-current="page" href="#"
+              >Упражнение</a
+            >
+          </li>
+          <li id="menu2" class="menuPassive">
+            <a href="faq.html">
+              Руководство
+            </a>
+          </li>
+        </ul>
       </div>
     </nav>
-    <div class="container text-center my-5">
+    <div class="">
       <div id="mainblock" class="row">
-        <div class="col-lg-6 col-md-8 mx-auto">
+        <div class="">
           <!-- Картинка -->
           <div id="myContainer">
             <div id="myAnimation"></div>
@@ -72,85 +51,26 @@
               id="time"
               href="#"
               class="butt"
-              onclick="vdoh(), myMove(), changeStyle()"
+              onclick="start(), myMoveSetTime(), changeStyle(), hideObject()"
               >Старт
             </a>
           </div>
-          <p id="comment" class="lead text-muted comment1">
-            Равномерный вдох через нос. Бесшумный выдох через рот.
+          
+          <p id="comment" class="comment1 hide">
+            10.
           </p>
         </div>
       </div>
-      <div
-        class="row row-cols-3 row-cols-md-2 row-cols-lg-1 container margin-top 100 mystyle difmargin"
-      >
-        <div class="col-auto">
-          <p id="comment" class="lead text-muted text-center">Вдох</p>
-          <p id="vdohTime" class="lead text-muted text-center time">10</p>
-          <button
-            id="vdohTimeMinus"
-            type="button"
-            class="btn btn-outline-light btn-circle2 text-muted btn-lg my-4 difficulty"
-            data-mdb-ripple-color="dark"
-            onclick="vdohTimeMinus()"
-          >
-            -
-          </button>
-          <button
-            id="vdohTimePlus"
-            type="button"
-            class="btn btn-outline-light btn-circle2 text-muted btn-lg my-4 difficulty"
-            data-mdb-ripple-color="dark"
-            onclick="vdohTimePlus()"
-          >
-            +
-          </button>
-        </div>
-        <div class="col-auto">
-          <p id="comment" class="lead text-muted text-center">Задержка</p>
-          <p id="zadTime" class="lead text-muted text-center time">10</p>
-          <button
-            id="zadTimeMinus"
-            type="button"
-            class="btn btn-outline-light btn-circle2 text-muted btn-lg my-4 difficulty"
-            data-mdb-ripple-color="dark"
-            onclick="zadTimeMinus()"
-          >
-            -
-          </button>
-          <button
-            id="zadTimePlus"
-            type="button"
-            class="btn btn-outline-light btn-circle2 text-muted btn-lg my-4 difficulty"
-            data-mdb-ripple-color="dark"
-            onclick="zadTimePlus()"
-          >
-            +
-          </button>
-        </div>
-        <div class="col-auto">
-          <p id="comment" class="lead text-muted text-center">Выдох</p>
-          <p id="vidohTime" class="lead text-muted text-center time">10</p>
-          <button
-            id="vidohTimeMinus"
-            type="button"
-            class="btn btn-outline-light btn-circle2 text-muted btn-lg my-4 difficulty"
-            data-mdb-ripple-color="dark"
-            onclick="vidohTimeMinus()"
-          >
-            -
-          </button>
-          <button
-            id="vidohTimePlus"
-            type="button"
-            class="btn btn-outline-light btn-circle2 text-muted btn-lg my-4 difficulty"
-            data-mdb-ripple-color="dark"
-            onclick="vidohTimePlus()"
-          >
-            +
-          </button>
+      <!-- Левел -->
+      <div>
+        
+        
+        <input id="range" type="range" value="10" max="80" min="1" oninput="changeLevel(), rangeValue.value=value"/>
+        <output id="rangeValue">10</output>
+      </div>
         </div>
       </div>
+      
     </div>
   </body>
 </html>
