@@ -1,0 +1,29 @@
+// const levelChange = document.getElementById("level");
+// const levelValue = levelChange.value;
+
+// document.getElementById("level").addEventListener("change", function () {
+//   document.getElementById("levelValue").innerHTML = 1;
+//   document.getElementById("comment").innerHTML = levelValue;
+// });
+
+// // код с сайта
+// const rangeInputs = document.querySelectorAll('input[type="range"]');
+// const numberInput = document.querySelector('input[type="number"]');
+
+// function handleInputChange(e) {
+//   let target = e.target;
+//   if (e.target.type !== "range") {
+//     target = document.getElementById("range");
+//   }
+//   const min = target.min;
+//   const max = target.max;
+//   const val = target.value;
+
+//   target.style.backgroundSize = ((val - min) * 100) / (max - min) + "% 100%";
+// }
+
+// rangeInputs.forEach((input) => {
+//   input.addEventListener("input", handleInputChange);
+// });
+
+// numberInput.addEventListener("input", handleInputChange);
