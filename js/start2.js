@@ -21,10 +21,12 @@ window.onload = function () {
     output.setAttribute("value", "10");
     level = 10;
     document.getElementById("rangeValue").innerHTML = level;
+    newZadLevel();
   } else {
     output.setAttribute("value", savedLevel);
     level = Number(savedLevel);
     document.getElementById("rangeValue").innerHTML = level;
+    newZadLevel();
   }
 };
 
@@ -51,7 +53,6 @@ const newZadLevel = () => {
   zad9 = Math.floor((zad8 + zad10) / 2);
   zad = [zad1, zad2, zad3, zad4, zad5, zad6, zad7, zad8, zad9, zad10];
 };
-newZadLevel();
 
 let zadc = [10, 12, 14, 16, 20, 23, 39, 39, 39, 20, 29];
 let vdoh;
