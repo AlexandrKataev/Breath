@@ -7,7 +7,7 @@
     <title>Breath</title>
     <script src="./js/start2.js"></script>
     <script src="./js/changestyle.js"></script>
-    <script src="./js/level.js"></script>
+    <!-- <script src="./js/level.js"></script> -->
 
     <link rel="icon" type="image/png" sizes="32x32" href="./img/favvv.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="./img/favvv.png" />
@@ -37,13 +37,15 @@
       <div id="mainblock" class="row">
         <div class="">
           <!-- Картинка -->
-          <div id="myContainer">
+          
+          <div id="myContainer" class="">
+            <div id="myContainer2" class=""></div>
             <div id="myAnimation"></div>
-            <img id="image" width="100%" src="./img/img.png" alt="ERROR" />
+            <!-- <img id="image" width="100%" src="./img/img.png" alt="ERROR" /> -->
           </div>
-          <div class="anim1"></div>
+          <!-- <div class="anim1"></div>
           <h1 class="text-muted"></h1>
-          <p class="text-muted timer"></p>
+          <p class="text-muted timer"></p> -->
 
           <!-- кнопка Старт -->
           <div class="dws">
@@ -51,7 +53,7 @@
               id="time"
               href="#"
               class="butt"
-              onclick="start(), myMoveSetTime(), changeStyle(), hideObject()"
+              onclick="start(), changeStyle(), hideObject()"
               >Старт
             </a>
           </div>
@@ -62,12 +64,12 @@
         </div>
       </div>
       <!-- Левел -->
-      <div>
+      <form id="myform">
         
         
-        <input id="range" type="range" value="10" max="80" min="1" oninput="changeLevel(), rangeValue.value=value"/>
+        <input id="range" type="range" value="" max="80" min="1" oninput="changeLevel(), rangeValue.value=value"/>
         <output id="rangeValue">10</output>
-      </div>
+      </form>
         </div>
       </div>
       
