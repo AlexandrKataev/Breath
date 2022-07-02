@@ -219,4 +219,4 @@ const hideObject = () => {
   document.getElementById("menu2").classList.add("hide");
 };
 
-
+localStorage.clear();
