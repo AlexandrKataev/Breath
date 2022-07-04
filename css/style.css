@@ -31,6 +31,10 @@ li {
   margin: 0 auto;
 }
 
+#myform {
+  z-index: +1;
+}
+
 #myContainer2 {
   position: relative;
   z-index: -1;
