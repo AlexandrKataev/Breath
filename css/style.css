@@ -414,7 +414,7 @@ input[type="range"]::-ms-track {
 }
 .loading {
   transform: scale(0.7, 0.7);
-  margin-top: -30px;
+  margin-top: 325px;
   visibility: hidden;
   margin-left: 0%;
 }
