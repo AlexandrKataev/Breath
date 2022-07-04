@@ -12,7 +12,7 @@ ul {
 }
 a {
   text-decoration: none; /*убираем подчеркивание текста ссылок*/
-  color: #cd82cd;
+  color: #cd82a5;
   font-size: 17px;
 }
 
@@ -26,43 +26,117 @@ li {
   width: 400px;
   height: 400px;
   position: relative;
-  background: yellow;
+  background-image: linear-gradient(rgb(255, 99, 255), rgb(255, 127, 115));
   -webkit-mask-box-image: url(./img.png);
-
   margin: 0 auto;
 }
-#myAnimation {
+
+#myContainer2 {
+  position: relative;
+  z-index: -1;
+  display: block;
+  top: 100%;
   width: 400px;
-  height: 800px;
-  position: absolute;
-  background: rgba(255, 255, 255, 0.438);
-  mask-image: url(./img.png);
-  top: 400px;
+  height: 400px;
+  opacity: 0.5;
+  background: #fef0ff;
+
+  animation-duration: 7s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 #element::-webkit-scrollbar {
   width: 0;
 }
 
+#rangeValue {
+  margin-top: 270px;
+}
+
 @media (max-height: 850px) {
-  #mainblock {
-    transform: scale(0.7, 0.7);
-    margin-top: -150px;
+  #element {
+    transform: scale(0.6, 0.6);
+    margin-top: -140px;
   }
   .dws {
-    top: 540px !important;
+    top: 580px !important;
+  }
+  #range {
+    margin-top: 0px;
+  }
+  #rangeValue {
+    margin-top: 250px;
   }
 }
 
 .dws {
   position: absolute;
-  top: 650px;
+  top: 620px;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+/* Анимация картинки */
+
+@keyframes breath {
+  from {
+    top: 100%;
+  }
+  to {
+    top: 0%;
+  }
+}
+
+@keyframes breath2 {
+  from {
+    top: 0%;
+  }
+  to {
+    top: 100%;
+  }
+}
+.animStart {
+  animation: breath;
+}
+.animReverse {
+  animation: breath2;
+}
+
+.anim {
+  position: relative;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+
+  left: 0%;
+  opacity: 0.3;
+  transition: 1s;
+}
+
+.butt2 {
+  border: 3px solid #ffb4ab;
+  border-radius: 50%;
+  /* background-color: #f66c8a; */
+  font-size: 30px;
+  color: #ffb4ab;
+  text-decoration: none;
+  /* text-transform: uppercase; */
+  width: 200px;
+  height: 200px;
+  display: block;
+  text-align: center;
+  line-height: 200px;
+  font-family: Arial, Helvetica;
+  position: relative;
+  transition: 0.5s;
+  overflow: hidden;
 }
 
 .butt {
@@ -179,11 +253,14 @@ li {
   font-weight: 350;
 }
 .comment1 {
-  margin-top: 280px;
-  text-align: center;
-  font-size: 20px;
-  color: #f5f5f5;
-  opacity: 0.3;
+  position: absolute;
+  margin-top: 275px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 .comment2 {
   font-size: 30px;
@@ -215,6 +292,7 @@ li {
 input,
 output {
   display: block;
+
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
@@ -322,5 +400,24 @@ input[type="range"]::-ms-track {
   visibility: hidden;
 }
 .show {
-  visibility: visible;
+  visibility: visible !important;
+}
+
+.point {
+  width: 19px;
+  border-radius: 50%;
+  background-color: #ffb4ab;
+  display: inline-block;
+  transition: 0.5s;
+  opacity: 0.2;
+  margin-left: auto;
+}
+.loading {
+  transform: scale(0.7, 0.7);
+  margin-top: -30px;
+  visibility: hidden;
+  margin-left: 0%;
+}
+.pointActive {
+  opacity: 1 !important;
 }
